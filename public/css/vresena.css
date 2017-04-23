@@ -1,0 +1,101 @@
+.post{
+    background: #e6ecff;
+    padding:40px;
+    padding-top:20px;
+    margin-bottom:20px;
+    border: 1px solid #999;
+}
+	
+.post-title{
+    color: gray;
+}
+	
+.post .thumb{
+    width:100%;
+}
+	
+.post .thumb img{
+    width:100%;
+    height: 300px;
+    border: 2px solid white;
+}
+	
+.post-contend{
+    line-height: 150%;
+    font-size: 110%;
+}
+
+#fecha-autor{
+    margin-top: 6px;
+}
+
+.list-group:hover .list-group-item:hover{
+    background:gray;
+    color:white;
+}
+    
+#img-coment{
+	margin-top: 10px;
+    border: 1px solid white;
+	border-radius: 8px;
+    width: 110px;
+    height: 90px;
+}
+
+#img-coment img{
+    width: 100%;
+    height: 100%;
+}
+
+#content-coment{
+    margin-top: 10px;
+    margin-right: 10%;
+	padding:10px;
+	background: #3377ff;
+	border-radius: 4px;
+}
+
+#coment{
+    margin-bottom: 10px;
+}
+
+.form-coment{
+	display: inline-block;
+}
+   
+#coment{
+    margin-top: 10px;
+}
+
+#post-remove-button, #post-edit-button{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+@media screen and (max-width:868px){
+    .logo{
+        width: 80%; 
+        height: 180px;
+    }
+	.post .thumb img{
+        width:100%;
+        height: 250px;
+    }
+}
+	
+@media screen and (max-width:420px){
+     .logo{
+        width: 90%; 
+        height: 120px;
+    }
+    .post .thumb img{
+        width:100%;
+        height: 200px;
+    }
+}
+
+.container-btn{
+    overflow: hidden;
+    padding: 1%;
+    height: 1%;
+}

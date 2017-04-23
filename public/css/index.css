@@ -1,0 +1,90 @@
+body{
+    margin:0px;
+    height:100%;
+    background-image: url("../images/landing.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.center-block{
+    float:none;
+}
+
+.row{
+    margin:0px;
+}
+
+.registro{
+    background: rgba(1, 1, 1, 0.2);
+    border: 1px solid #999999;
+    border-radius: 4px;
+    padding-right:60px ;
+    padding-left:60px;
+}
+
+.registro:hover{
+    box-shadow: 0px 0px 40px blue,  0px 0px 40px white;
+}
+
+.info{
+    background: rgba(1, 1, 1, 0.2);
+    border: 1px solid #999999;
+    border-radius: 4px;
+    margin:0px;
+    padding: 15px;
+}
+
+.textP{
+    color: #99c2ff;
+}
+    
+h1{
+    font-size: 600%
+}
+
+h2, h3{
+    font-family: Times New Roman;
+}
+
+@media screen and (max-width:1268px){
+    .cont-login{
+        margin-top: 0px;
+    }
+    .registro{
+        padding-right: 30px;
+        padding-left: 30px;
+    }  
+}
+
+@media screen and (max-width: 400px){
+    h1{
+        font-size: 300%;
+    }
+    h2{
+        font-size: 200%;
+    }
+    .registro, .info{
+        margin-top: 10px;
+    }
+}
+
+.preview {
+    height: 100px;
+    width: 100px;
+}
+
+#imagen-pre{
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    height: 100px;
+}
+
+div.info{
+    margin-bottom: 10px;
+}
+
+.fn{
+    height: 60px;
+}

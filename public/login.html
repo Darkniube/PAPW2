@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head> 
+     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="images/logo2.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sitioengeneral.css">
+    <link rel="stylesheet" href="css/login.css">
+  
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand sinpadding-top"><span><img src="images/logo2.png" class="img-logo" alt=""></span></a>
+                    <a href="#" class="navbar-brand">TAmovies</a>
+                </div>
+     
+                <div class="navbar-collapse collapse" id="menu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Inicio</a></li>
+                    </ul>
+      
+                    <ul class="nav navbar-nav navbar-right"> 
+                        <li><a href="#">Iniciar sesion</a></li>
+                    </ul>
+
+                </div>      
+            </div>
+        </nav>
+    </header>
+
+    <div class="container cont-login">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 center-block">
+                <h1 class="text-center">TAmovies</h1>
+                <div class="jumbotron login">
+                    <h2 class="text-center textC"> Iniciar sesion </h2>
+       
+                    <hr></hr>
+
+                    <form method="post" action="actions/ingresar.php">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                <input type="text" name="nombre" class="form-control" placeholder="Nombre de usuario">
+                            </div>
+                        </div>
+          
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                <input type="text" name="pass" class="form-control" placeholder="Contraseña">
+                            </div>
+                        </div>
+          
+                        <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-lg center-block">Ingresar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

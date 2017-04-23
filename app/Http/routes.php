@@ -11,6 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('prueba', function () {
+    return "hola";
+});
+
+Route::group(['middleware' => ['web']], function () {
+    
+Route::get('/','FrontController@index');
+Route::get('login','FrontController@login');
+Route::get('resena','ReviewController@index');
+Route::get('vresena','VReviewController@index');
+Route::get('perfil','FrontController@perfil');
+
+Route::resource('Usuario','UserController');
+Route::resource('Resena','ReviewController');
+Route::resource('Comentario','ComentController');
+Route::resource('VResenas','VReviewController'); 
+Route::resource('Log','LogController'); 
+Route::resource('Resultados','ResultsController'); 
+
+
 });

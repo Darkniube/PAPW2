@@ -1,0 +1,28 @@
+h3{
+    color:#333333;
+}
+        
+.img-perfil{
+    width: 70%;
+    height: 120px;
+    margin-top: 20px;
+}
+
+.posts{
+    background: #e6ecff;
+}
+
+.post{
+    background: white;
+}
+
+@media screen and (max-width:480px){
+    .img-perfil{
+        width: 100%;
+    }
+}
+
+#post-remove-button, #post-edit-button{
+    cursor: pointer;
+    margin-left: 10px;
+}

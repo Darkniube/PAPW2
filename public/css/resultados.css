@@ -1,0 +1,48 @@
+#result-head{
+    color: gray;
+}
+	
+.result{
+    background: white;
+    padding:20px;
+    padding-bottom: 10px;
+    margin-bottom:10px;
+    border-bottom: 1px solid #999;
+    width: 80%;
+}
+    
+.result .result-title a{
+    color:gray;
+}
+    
+.result .thumb{
+    margin-right: 10px;
+    width:30%;
+}
+
+.list-group:hover .list-group-item:hover{
+	background:gray;
+	color:white;
+}
+
+@media screen and (max-width:868px){
+    .result .thumb{
+        width:100%;
+    }
+    .result{
+        width: 80%;
+    }
+}
+    
+@media screen and (max-width:420px){
+        
+    .logo{
+        width: 90%; 
+        height: 120px;
+    }
+
+    .result{
+        width: 100%;
+    }
+
+}
