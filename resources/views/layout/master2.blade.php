@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="icon" type="image/png" href="images/logo2.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/sitioengeneral.css">
+    <link rel="icon" type="image/png" href="/images/logo2.png" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/sitioengeneral.css">
     @yield('estilos')
     
 </head>
@@ -16,7 +16,7 @@
     <div class="fondo">
         <div class="jumbotron">
             <section class="container fondologo">
-                <img src="images/logo.png" alt="" class="logo center-block">
+                <img src="/images/logo.png" alt="" class="logo center-block">
             </section>
         </div>
 
@@ -30,16 +30,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="/resena" class="navbar-brand sinpadding-top"><span><img src="images/logo2.png" class="img-logo" alt=""></span></a>
+                        <a href="/resena" class="navbar-brand sinpadding-top"><span><img src="/images/logo2.png" class="img-logo" alt=""></span></a>
                         <a href="/resena" class="navbar-brand">TAmovies</a>
                     </div>
    
                     <div class="navbar-collapse collapse" id="menu">
                         <ul class="nav navbar-nav">
                             <li><a href="/resena">Inicio</a></li>
-    
+                            @if (Auth::check())
                             <li><a href="#" data-toggle="modal" data-target="#nnoti">Agregar reseña</a></li>
-
+                            @endif()
                         </ul>
         
                         <ul class="nav navbar-nav navbar-right"> 
@@ -51,7 +51,7 @@
                                  </a>
                                  <ul class="dropdown-menu">
                                     <li><a href="#">Perfil</a></li>
-                                    <li><a href="#">Salir</a></li>
+                                    <li><a href="/Logout">Salir</a></li>
                                 </ul>
                             </li>
                             @else
@@ -66,7 +66,6 @@
                             </div>   
                             
                             <div class="form-group">
-
                                 {!!Form::submit('@',['class'=>'btn btn-primary glyphicon glyphicon-search'])!!}
                             </div>  
 
@@ -78,22 +77,18 @@
             </nav>
         </header>
 
-   
    <!--Seccion de reseñas-->
 
         @yield('content')
                 <section class="posts hidden-xs hidden-sm col-md-3 col-lg-3">
                     <h4>Noticias mas recientes</h4>
                     <aside> 
-                        <a href="#" class="list-group-item">
-                            <h4 class="list-group-item-heading">creo que hoy llovera</h4>
-                            <p clss="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        @foreach($ultima_resenas as $ultima_resena)
+                        <a href="{{URL::route('Resena.show',$ultima_resena->idreview)}}" class="list-group-item">
+                            <h4 class="list-group-item-heading">{{$ultima_resena->titulo}}</h4>
+                            <p clss="list-group-item-text">{{$ultima_resena->texto}}</p>
                         </a>
-
-                        <a href="#" class="list-group-item">
-                            <h4 class="list-group-item-heading">creo que hoy llovera</h4>
-                            <p clss="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                        </a>
+                        @endforeach()
                     </aside>
                </section>
             </div>
@@ -159,9 +154,9 @@
             </div>
         </div>
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/modal.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/modal.js"></script>
 @yield('script')
 <body>
 </html>

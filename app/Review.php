@@ -14,7 +14,7 @@ class Review extends Model
     protected $primaryKey = 'idreview'; 
 
     protected $fillable = [
-       'titulo','texto','iduser','idgenre',
+       'titulo','texto','iduser','idgenre','r_imagen'
     ];
     
     protected $dates = ['deleted_at'];

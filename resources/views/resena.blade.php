@@ -19,7 +19,7 @@
                         <input type="hidden" value="{{$result->idreview}}" name="idUsuario">
 
                         <a href="{{URL::route('Resena.show',$result->idreview)}}" class="thumb pull-left">
-                            <img class="img-thumbnail" src="images/maxresdefault.jpg" alt="">
+                            <img class="img-thumbnail" src="images/posters/{{$result->r_imagen}}" alt="">
                         </a>
             
                         <h2 class="post-title"> 

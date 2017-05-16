@@ -16,8 +16,9 @@ class CreateUsersTable extends Migration
             $table->increments('iduser');
             $table->string('name',20);
             $table->string('email',100)->unique();
-            $table->enum('gender', array('Masculino', 'Femenino'));
-            $table->string('imagen',1000);
+            $table->enum('gender', array('Masculino','Femenino'));
+            $table->date('birthday');
+            $table->string('u_imagen',1000);
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

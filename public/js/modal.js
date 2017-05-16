@@ -17,4 +17,4 @@
         }
     }
                    
-    document.getElementById('imagen').addEventListener('change', archivo, false);
+    //document.getElementById('imagen').addEventListener('change', archivo, false);

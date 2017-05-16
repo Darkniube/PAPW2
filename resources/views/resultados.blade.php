@@ -15,7 +15,8 @@
 		            <article class="result clearfix center-block">
 
 		                <a href="{{URL::route('Resena.show',$resultado->idreview)}}" class="thumb pull-left">
-     	                    <img class="img-thumbnail" src="images/maxresdefault.jpg" alt="">
+     	                    <img class="img-thumbnail" src="images/posters/{{$resultado->r_imagen}}" alt=""> 
+                            
 		                </a>
 	   	  
 		                <h2 class="result-title">	

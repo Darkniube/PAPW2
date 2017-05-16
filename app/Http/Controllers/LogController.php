@@ -22,4 +22,11 @@ class LogController extends Controller
     	return Redirect::to('/login');
 
     }
+
+   public function logout(LoginRequest $request){
+    	Auth::logout();
+
+    	return Redirect::to('/login');
+
+    }
 }

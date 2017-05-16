@@ -28,6 +28,7 @@ Route::resource('Resena','ReviewController');
 Route::resource('Comentario','ComentController');
 Route::resource('VResenas','VReviewController'); 
 Route::resource('Log','LogController'); 
+Route::resource('Logout','LogController@logout'); 
 Route::resource('Resultados','ResultsController'); 
 
 

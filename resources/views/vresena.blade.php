@@ -1,26 +1,27 @@
 @extends('layout.master2')
 
     @section('estilos')
-        <link rel="stylesheet" type="text/css" href="css/vresena.css">
+        <link rel="stylesheet" type="text/css" href="/css/vresena.css">
     @stop
 
     @section('content')
-    @foreach($result as $results)
+        @foreach($result as $results)
         <section class="main container">
             <div class="row">
-	            <div class="posts col-lg-3">
+	            <div class="posts col-xs-12 col-md-12 col-md-9 col-lg-9">
 		            <div class="post clearfix"> 
                         <div id="post-re">
-                            <h4 class="glyphicon glyphicon-pencil" id="post-edit-button" data-toggle="modal" data-target="#post-edit"></h4>  
+                            <h4 class="glyphicon glyphicon-pencil" id="post-edit-button" data-toggle="modal" data-target="#post-edit"></h4>
+                            <h4 class="glyphicon glyphicon-remove" id="post-remove-button" data-toggle="modal" data-target="#post-dest"></h4>                     
                         </div>
-                        
-		                <h2 class="post-title">{{$results->titulo}}</h2>
+ 
+		                <h2 class="post-title">"{{$results->titulo}}"</h2>
 
 		                <div href="#" class="thumb center-block">
-		                    <img class="img-responsive" src="images/maxresdefault.jpg" alt="">
+		                    <img class="img-responsive" src="/images/posters/{{$results->r_imagen}}" alt="">
 		                </div>
 		  
-		                <p id="fecha-autor"><span class="post-fecha">26 de enero de 2015</span>por<span class="post-autor"><a href="#">Aldo</a></span></p>
+		                <p id="fecha-autor"><span class="post-fecha">26 de enero de 2015 </span>por <span class="post-autor"><a href="#">Aldo</a></span></p>
 		                <p class="post-contenido text-justify"> 
                         {{$results->texto}}
                         </p>
@@ -102,12 +103,9 @@
                                 <h4 class="modal-text">Imagen:</h4>   
                                 <div class="custom-input-file">
                                     {!!Form::file('imagen',null,['id'=>'imagen','class'=>'input-file'])!!}
-                                    <!--<input type="file" id="imagen" name="imagen" class="input-file">
-                                    <image id="imagen-pre" name="imagen-pre" src="images/image-icon.png">-->
                                     <output id="list"></output>
                                 </div>
-                            </div>
-                            
+                            </div>          
 
                             <div class="form-group">
                                 <h4 class="modal-text">Contenido: </h4>
@@ -154,8 +152,9 @@
                         </div>
                     </div>
                 </div>
-                @endforeach()
-                @stop
-        @section('script')
-        @stop
+        @endforeach()
+    @stop
+    @section('script')
+     <script src="/js/vresena.js"></script>
+    @stop
  

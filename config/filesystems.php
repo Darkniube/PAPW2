@@ -42,10 +42,19 @@ return [
     */
 
     'disks' => [
+        'perfil' => [
+            'driver' => 'local',
+            'root' => public_path('images/perfil'),
+        ],
+
+        'posters' => [
+            'driver' => 'local',
+            'root' => public_path('images/posters'),
+        ],
 
         'local' => [
             'driver' => 'local',
-            'root' => public_path('movies'),
+            'root' => public_path('images'),
         ],
 
         'public' => [

@@ -67,6 +67,11 @@
     margin-top: 10px;
 }
 
+#post-re{
+    float: right;
+    display: none;
+}
+
 #post-remove-button, #post-edit-button{
     cursor: pointer;
     margin-left: 10px;
@@ -93,7 +98,6 @@
         height: 200px;
     }
 }
-
 .container-btn{
     overflow: hidden;
     padding: 1%;

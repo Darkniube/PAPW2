@@ -22,7 +22,8 @@ $(document).ready(function(){
                 reader.onload = (function(theFile) {
                     return function(e) {
                                 // Insertamos la imagen
-                    document.getElementById("list").innerHTML = ['<img class="preview" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                    document.getElementById("imagen-pre").setAttribute("src", e.target.result);
+
                     };
                 })(f);            
             reader.readAsDataURL(f);

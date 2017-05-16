@@ -16,7 +16,6 @@ class VReviewController extends Controller
     public function show($idreview)
     {
     	$resena = \App\Review::select('titulo')->where('idreview', $idreview);
-   
         return view('vresena', compact('resena')); 
 
     }
