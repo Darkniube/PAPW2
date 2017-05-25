@@ -35,9 +35,13 @@ h1{
     color: #99c2ff;
 }
 
+h4{
+    color: white;
+}
+
 @media screen and (max-width:768px){
     h1{
-        font-size: 300%;
+        font-size: 500%;
     }
    .cont-login{
         width:90%;

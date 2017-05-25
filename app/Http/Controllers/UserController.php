@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Requests\UserCreateRequest;
+use App\User;
+use Auth;
 use Storage;
 
 

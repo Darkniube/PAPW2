@@ -11,7 +11,7 @@
                 <h1 class="text-center textP">TAMovies</h1>
             </div>
 
-            <div class="info col-12-xs hidden-sm col-md-6 col-lg-6">
+            <div class="info col-12-xs col-12-sm col-md-6 col-lg-6">
                 <h2 class="text-center textP">Escribe y revive tu experiencia</h2>
                 <h3 class="text-left textP animate ani1"><span class="glyphicon glyphicon-ok"></span> Mira miles de reseñas de tus peliculas favoritas</h3>
                 <h3 class="text-left textP animate ani2"><span class="glyphicon glyphicon-ok"></span> O escribelas y dales tu valoracion </h3>
@@ -23,6 +23,7 @@
                 <h2 class="text-center textP">Crea tu cuenta ahora</h2>
 
                 {!!Form::open(['route'=>'Usuario.store', 'method'=>'POST', 'files'=>true])!!}
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>

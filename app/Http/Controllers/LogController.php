@@ -12,18 +12,18 @@ use App\Http\Requests\LoginRequest;
 
 class LogController extends Controller
 {
-    public function store(LoginRequest $request){
+    public function store(Request $request){
     	if(Auth::attempt(['email'=>$request['email'],'password'=>$request['pass']])){
            
            return Redirect::to('/resena');
-            //dd(Auth::user());
+            
     	}
 
     	return Redirect::to('/login');
 
     }
 
-   public function logout(LoginRequest $request){
+   public function logout(Request $request){
     	Auth::logout();
 
     	return Redirect::to('/login');

@@ -8,23 +8,36 @@
         @foreach($result as $results)
         <section class="main container">
             <div class="row">
-	            <div class="posts col-xs-12 col-md-12 col-md-9 col-lg-9">
+	            <div class="posts col-xs-12 col-sm-12 col-md-9 col-lg-9">
 		            <div class="post clearfix"> 
-                        <div id="post-re">
-                            <h4 class="glyphicon glyphicon-pencil" id="post-edit-button" data-toggle="modal" data-target="#post-edit"></h4>
-                            <h4 class="glyphicon glyphicon-remove" id="post-remove-button" data-toggle="modal" data-target="#post-dest"></h4>                     
-                        </div>
- 
-		                <h2 class="post-title">"{{$results->titulo}}"</h2>
+                        
+                         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 sinpadding">
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 sinpadding">
 
-		                <div href="#" class="thumb center-block">
-		                    <img class="img-responsive" src="/images/posters/{{$results->r_imagen}}" alt="">
-		                </div>
+                            <div href="#" class="thumb text-center">
+                                <img class="img-responsive" src="/images/posters/{{$results->r_imagen}}" alt="">
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+
+		                    <h2 class="post-title">"{{$results->titulo}}"</h2>
 		  
-		                <p id="fecha-autor"><span class="post-fecha">26 de enero de 2015 </span>por <span class="post-autor"><a href="#">Aldo</a></span></p>
-		                <p class="post-contenido text-justify"> 
-                        {{$results->texto}}
-                        </p>
+		                    <p id="fecha-autor"><span class="post-fecha">26 de enero de 2015 </span>por <span class="post-autor"><b>{{$results->name}}</b></span></p>
+		                    <p class="post-contenido text-justify"> 
+                                {{$results->texto}}
+                            </p>
+
+                        </div>
+                        </div>
+
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 sinpadding">
+                            <div id="post-re">
+                                <h4 class="glyphicon glyphicon-pencil" id="post-edit-button" data-toggle="modal" data-target="#post-edit"></h4>
+                                <h4 class="glyphicon glyphicon-remove" id="post-remove-button" data-toggle="modal" data-target="#post-dest"></h4>                     
+                            </div>
+                        </div>
 		            </div>
 
 	                <h4>Comentarios</h4>
@@ -48,7 +61,7 @@
                         <div id="coment" class="col-lg-12">
                             <div class="col-md-2 col-lg-2 sinpadding">
                                 <div id="img-coment">
-                                    <img class="img-responsive" src="images/maxresdefault.jpg" alt="">
+                                    <img class="img-responsive" src="/images/perfil/{{$coment->u_imagen}}" alt="">
                                 </div>
                             </div>
 	                  
@@ -102,7 +115,8 @@
                             <div class="form-group">
                                 <h4 class="modal-text">Imagen:</h4>   
                                 <div class="custom-input-file">
-                                    {!!Form::file('imagen',null,['id'=>'imagen','class'=>'input-file'])!!}
+                                    {!!Form::file('imagen2',['id'=>'imagen2','class'=>'input-file'])!!}
+                                    <image id="imagen-pre2" name="imagen-pre" src="/images/image-icon2.png">
                                     <output id="list"></output>
                                 </div>
                             </div>          

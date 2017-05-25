@@ -13,36 +13,39 @@
                         <hr class="line">
                     </div>
                     
+
                     @foreach($resenas as $result)
-                    <article class="post clearfix ">
+                    <div class="posts2 col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <article class="post clearfix">
 
                         <input type="hidden" value="{{$result->idreview}}" name="idUsuario">
 
-                        <a href="{{URL::route('Resena.show',$result->idreview)}}" class="thumb pull-left">
+                        <a href="{{URL::route('Resena.show',$result->idreview)}}" class="thumb pull-left text-center">
                             <img class="img-thumbnail" src="images/posters/{{$result->r_imagen}}" alt="">
                         </a>
             
-                        <h2 class="post-title"> 
-                            <a href="/vresena">{{$result->titulo}}</a>         
+                        <h2 class="post-title text-center"> 
+                            <a href="{{URL::route('Resena.show',$result->idreview)}}" class="text">"{{$result->titulo}}"</a>         
                         </h2>
 
                         <p>
-                            <span class="post-fecha">26 de enero de 2015 </span>por <span class="post-autor"><a href="#">Aldo</a></span>
+                            <span class="post-fecha limitado2">{{$result->created_at}}</span> por <span class="post-autor"><b>{{$result->name}}</b></span>
                         </p>
                        
-                        <p class="post-contenido text-justify">
+                        <p class="post-contenido text-justify limitado">
                             {{$result->texto}}
                         </p>
 
-                       
                         <div class="contenedor-botones">
                         {!!link_to_route('Resena.show','Leer mas',$result->idreview, ['class'=>'btn btn-primary'])!!}
                         <button type="button" class="btn btn-success">Comentarios <span class="badge">2</span></button>
                         </div>
 
                     </article>
+                    </div>
                     @endforeach
-
+                    
+                    <div class="posts col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <nav>
                         <div class="center-block">
                             <ul class="pagination">
@@ -56,6 +59,7 @@
                             </ul>
                         </div>
                     </nav>
+                    </div>
     
                 </section>
                 @stop

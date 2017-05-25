@@ -30,6 +30,6 @@ Route::resource('VResenas','VReviewController');
 Route::resource('Log','LogController'); 
 Route::resource('Logout','LogController@logout'); 
 Route::resource('Resultados','ResultsController'); 
-
+Route::resource('Perfil','PerfilController'); 
 
 });

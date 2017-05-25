@@ -3,12 +3,12 @@ h2, h3, h4{
     font-weight: bold;
 }
     
-div, h1, h2, h3, h4, h5, h6{
+/*div, h1, h3, h4, h5, h6{
 	word-wrap: break-word;
-}
+}*/
 
 textarea{
-    	width: 300px;
+    width: 300px;
 }
 
 .line{
@@ -117,25 +117,20 @@ textarea{
 }
 
 .colorF,.colorF2{
-    background:#001f4d;
-    color:white;
-    border:solid 1px #3333ff;
+    background:#e6f0ff;
+    color:black;
+    border:solid 1px black;
 }
 
 .modal-content{
     margin-top: 100px;
     padding: 20px;
-    background: #0066cc;
-    box-shadow: 0px 0px 40px #1a75ff,  0px 0px 40px white;
+    background: white;
+    box-shadow: 0px 0px 40px #b3d1ff,  0px 0px 40px white;
 }
 
 .modal-text{
-    color:white;
-}
-
-#imagen-pre{
-    width: 100px;
-    height: 100px;
+    color:black;
 }
 
 .preview {
@@ -184,4 +179,13 @@ textarea{
 .post-re{
     float: right;
     display: none;
+}
+
+#resena{
+    margin-top: 60px;
+}
+
+#imagen-pre{
+    height: 200px;
+    width: 100px;
 }

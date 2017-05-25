@@ -50,7 +50,7 @@
                                   {!!Auth::user()->name!!}<b class="caret"></b>
                                  </a>
                                  <ul class="dropdown-menu">
-                                    <li><a href="#">Perfil</a></li>
+                                    <li><a href="{{URL::route('Perfil.show',Auth::user()->iduser)}}">Perfil</a></li>
                                     <li><a href="/Logout">Salir</a></li>
                                 </ul>
                             </li>
@@ -60,13 +60,15 @@
                         </ul>
     
                         {!!Form::open(['route'=>'Resultados.store','Method'=>'GET','class'=>'navbar-form navbar-right'])!!}
+
+                           {{ csrf_field() }}
     
                             <div class="form-group">
                                 {!!Form::text('texto',null,['id'=>'texto','class'=>'form-control','´placeholder'=>'buscar...'])!!}
                             </div>   
                             
-                            <div class="form-group">
-                                {!!Form::submit('@',['class'=>'btn btn-primary glyphicon glyphicon-search'])!!}
+                             <div class="form-group">
+                                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>    
                             </div>  
 
                         {!!Form::close()!!}
@@ -81,12 +83,12 @@
 
         @yield('content')
                 <section class="posts hidden-xs hidden-sm col-md-3 col-lg-3">
-                    <h4>Noticias mas recientes</h4>
+                    <h4>Reseñas mas recientes</h4>
                     <aside> 
                         @foreach($ultima_resenas as $ultima_resena)
                         <a href="{{URL::route('Resena.show',$ultima_resena->idreview)}}" class="list-group-item">
                             <h4 class="list-group-item-heading">{{$ultima_resena->titulo}}</h4>
-                            <p clss="list-group-item-text">{{$ultima_resena->texto}}</p>
+                            <p class="list-group-item-text limitado2">{{$ultima_resena->texto}}</p>
                         </a>
                         @endforeach()
                     </aside>
@@ -94,6 +96,7 @@
             </div>
         </section>
 
+        @if (Auth::check())
         <div class="modal fade" id="nnoti" tabindex="-1" role="dialog" arial-labelledly="myModalLabel" arial-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -106,6 +109,8 @@
                     </div>
                     <div class="modal-body"> 
                         {!!Form::open(['route'=>'Resena.store','method'=>'POST','files'=>true])!!}
+                        {{ csrf_field() }}
+                        
                             <div class="form-group">
                                 <h4 class="modal-text">Titulo: </h4>
                                 <div class="input-group">
@@ -118,7 +123,7 @@
                                 <h4 class="modal-text">Genero: </h4>
                                 <div class="input-group">
                                     <div class="input-group-addon colorF"><span class="glyphicon glyphicon-star"></span></div>
-                                    <select name="genero" class="form-control colorF2">
+                                    <select name="genero" id="genero" class="form-control colorF2">
                                         @foreach($generos as $genero)
                                             <option value="{{$genero->idgenre}}">{{$genero->nombre}}</option>
                                         @endforeach()
@@ -130,20 +135,31 @@
                             <div class="form-group">
                                 <h4 class="modal-text">Imagen:</h4>   
                                 <div class="custom-input-file">
-                                    {!!Form::file('imagen',null,['id'=>'imagen','class'=>'input-file'])!!}
-                                    <!--<input type="file" id="imagen" name="imagen" class="input-file">
-                                    <image id="imagen-pre" name="imagen-pre" src="images/image-icon.png">-->
+                                   <input type="file" id="imagen" name="imagen" class="input-file">
+                                    <!--<input type="file" id="imagen" name="imagen" class="input-file">-->
+                                    <image id="imagen-pre" name="imagen-pre" src="/images/image-icon2.png">
                                     <output id="list"></output>
+                                </div>
+
+            
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Año:</h4>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 sinpadding fn">
+                                        {!!Form::select('year', array('2017' => '2017','2016' => '2016'), null, ['class' => 'form-control colorF2'] )!!}
                                 </div>
                             </div>
                             
-                            <div class="form-group">
-                                <h4 class="modal-text">Contenido: </h4>
+                            <div id="resena" class="form-group">
+                                <h4 class="modal-text">Reseña: </h4>
                                 <div class="input-group">
                                     <div class="input-group-addon colorF"><span class="glyphicon glyphicon-pencil"></span></div>
                                     {!!Form::textarea('texto',null,['id'=>'texto','class'=>'form-control colorF2', 'rows'=>10])!!}
                                 </div> 
                             </div>
+
+                            {!!Form::hidden('idreview',Auth::user()->iduser)!!}
 
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-lg center-block">Guardar</button>
@@ -153,10 +169,11 @@
                 </div>
             </div>
         </div>
-
+@endif()
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/modal.js"></script>
+
 @yield('script')
 <body>
 </html>

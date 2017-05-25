@@ -7,7 +7,46 @@
         }); 
 
     });*/
-        
+
+    $(document).ready(function(){
+
+    var ancho = $(window).width();
+ 
+    if(ancho<440)
+    {
+        $(".posts2").removeClass("col-xs-6");
+        $(".posts2").toggleClass("col-xs-12");
+    }
+    else
+    {
+        $(".posts2").removeClass("col-xs-12");
+        $(".posts2").toggleClass("col-xs-6");
+    }
+
+
+    $(".limitado").each(function (){
+
+     $limite_text = $(this).text();
+
+if ($limite_text.length > 500)
+{
+     $limite = $limite_text.substr(0, 500)+" ...";
+$(this).text($limite);
+}
+});
+
+  $(".limitado2").each(function (){
+
+     $limite_text = $(this).text();
+
+if ($limite_text.length > 8)
+{
+     $limite = $limite_text.substr(0, 10);
+$(this).text($limite);
+}
+});
+
+});
 
     function archivo(evt) {
         var files = evt.target.files; // FileList object     
@@ -29,3 +68,4 @@
     }
                    
     document.getElementById('imagen').addEventListener('change', archivo, false);
+

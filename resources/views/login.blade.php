@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                                {!!Form::text('pass',null,['id'=>'pass','class'=>'form-control', 'placeholder'=>'contraseña','required'])!!}
+                                {!!Form::password('pass',['id'=>'pass','class'=>'form-control', 'placeholder'=>'contraseña','required'])!!}
                             </div>
                         </div>
           

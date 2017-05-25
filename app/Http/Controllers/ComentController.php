@@ -20,6 +20,11 @@ class ComentController extends Controller
     		'idreview' =>$request['idreview'],
     		]);
 
-    	return "comentario insertado";
+        $result = \App\Review::where('idreview', $request['idreview'])->get();
+        $coments = \App\Coment::select('u_imagen','name','idcoment','texto','coment.created_at')->join('users', 'coment.iduser', '=', 'users.iduser')->where('idreview', $request['idreview'])->get();
+        $generos = \App\Genre::all(); 
+        $ultima_resenas = \App\Review::orderby('created_at','DESC')->take(2)->get();
+        
+        return view( 'vresena', ['result'=>$result, 'coments'=>$coments, 'generos' => $generos, 'ultima_resenas' => $ultima_resenas]);
     }
 }

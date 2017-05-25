@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -12,5 +13,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+                DB::table('genre')->insert([
+        	['nombre'=>'Accion'],
+        	['nombre'=>'Ciencia ficcion'],
+        	['nombre'=>'Comedia'],
+        	['nombre'=>'Drama'],
+        	['nombre'=>'Romance'],
+        	['nombre'=>'Terror']
+        
+        ]);
     }
 }

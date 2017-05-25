@@ -25,6 +25,11 @@
 	color:white;
 }
 
+img.img-thumbnail{
+    width: 300px;
+    height: 150px;
+}
+
 @media screen and (max-width:868px){
     .result .thumb{
         width:100%;

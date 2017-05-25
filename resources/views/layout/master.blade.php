@@ -36,16 +36,6 @@
                         <li><a href="/login">Iniciar sesion</a></li>
                     </ul>
 
-                    <form method="post" class="navbar-form navbar-right" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="buscar...">
-                        </div>   
-       
-                        <div class="form-group">
-                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> </button>        
-                        </div>  
-                    </form>
-
                 </div>      
             </div>
         </nav>
