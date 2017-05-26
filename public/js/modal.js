@@ -1,6 +1,61 @@
-    
+$(document).ready(function(){
 
-        $(document).ready(function(){
+ $('#registrar').click(function()
+    {
+
+        $('.colorear').each(function()
+            {
+                var aa = $(this).val();
+                if(aa == "")
+                {   
+                    $(this).addClass('input_vacio');
+                    $(this).attr("placeholder", "* Campo obligatorio");
+                    $(this).css("border-color","#990000","border-size","2px");
+                    return false;
+
+                }
+                else
+                {
+                    $(this).addClass('input_lleno');
+                    $(this).attr("placeholder", "");
+                    $(this).css("border-color","green","border-size","2px");
+                }
+
+            });
+
+        });
+
+     $('.colorear').blur(function()
+            {
+                var aa = $(this).val();
+                if(aa == "")
+                {   
+                    $(this).addClass('input_vacio');
+                    $(this).attr("placeholder", "* Campo obligatorio");
+                    $(this).css("border-color","#990000","border-size","2px");
+                    return false;
+
+                }
+                else
+                {
+                    $(this).addClass('input_lleno');
+                    $(this).attr("placeholder", "");
+                    $(this).css("border-color","green","border-size","2px");
+                }
+
+            });
+     
+
+    $(".limitado").each(function (){
+
+     $limite_text = $(this).text();
+
+if ($limite_text.length > 500)
+{
+     $limite = $limite_text.substr(0, 400)+" ...";
+$(this).text($limite);
+}
+});
 
     $(".limitado2").each(function (){
 
@@ -9,6 +64,17 @@
 if ($limite_text.length > 50)
 {
      $limite = $limite_text.substr(0, 50)+" ...";
+$(this).text($limite);
+}
+});
+
+      $(".limitado3").each(function (){
+
+     $limite_text = $(this).text();
+
+if ($limite_text.length > 100)
+{
+     $limite = $limite_text.substr(0, 100);
 $(this).text($limite);
 }
 });

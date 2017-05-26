@@ -23,29 +23,6 @@
         $(".posts2").toggleClass("col-xs-6");
     }
 
-
-    $(".limitado").each(function (){
-
-     $limite_text = $(this).text();
-
-if ($limite_text.length > 500)
-{
-     $limite = $limite_text.substr(0, 500)+" ...";
-$(this).text($limite);
-}
-});
-
-  $(".limitado2").each(function (){
-
-     $limite_text = $(this).text();
-
-if ($limite_text.length > 8)
-{
-     $limite = $limite_text.substr(0, 10);
-$(this).text($limite);
-}
-});
-
 });
 
     function archivo(evt) {

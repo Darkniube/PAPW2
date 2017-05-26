@@ -12,7 +12,7 @@
                 <section class="main container">
             <div class="row">
                 <section class="col-xs-12 col-sm-12 col-md-9 col-lg-9 sinpadding">
-                    <h3>Perfil</h3>
+                    <h3 class="text-w">Perfil</h3>
                     <hr class="line">
                     <div class="posts2 col-xs-12 col-md-12 col-lg-12">
 

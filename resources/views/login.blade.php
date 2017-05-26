@@ -1,5 +1,9 @@
 @extends('layout.master')
 
+@section('titulo')
+<title>Login</title>
+@stop
+
 @section('estilos')
     <link rel="stylesheet" href="css/login.css">
 @stop
@@ -31,6 +35,10 @@
           
                         <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-lg center-block">Ingresar</button>
+                        </div>
+
+                        <div class="form-group">
+                                <h4 class="textC text-center">No tienes cuenta? <a href="/">Registrate</a></h4>
                         </div>
                     {!!Form::close()!!}
 

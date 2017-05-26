@@ -17,7 +17,7 @@ class CreateReviewTable extends Migration
             $table->increments('idreview');
             $table->string('titulo', 100);
             $table->string('anio',10);
-            $table->string('texto',1000);
+            $table->string('texto',3000);
             $table->string('r_imagen',1000);
             $table->timestamps();
             $table->softDeletes();

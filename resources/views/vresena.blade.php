@@ -32,15 +32,17 @@
                         </div>
                         </div>
 
+                        @if (Auth::user()->iduser==$results->iduser)
                         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 sinpadding">
                             <div id="post-re">
                                 <h4 class="glyphicon glyphicon-pencil" id="post-edit-button" data-toggle="modal" data-target="#post-edit"></h4>
                                 <h4 class="glyphicon glyphicon-remove" id="post-remove-button" data-toggle="modal" data-target="#post-dest"></h4>                     
                             </div>
                         </div>
+                        @endif()
 		            </div>
 
-	                <h4>Comentarios</h4>
+	                <h4 class="text-w">Comentarios</h4>
 	                <div class="row">
                        <div class="col-lg-12">   
                             <div id="box-coment">

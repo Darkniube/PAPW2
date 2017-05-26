@@ -7,6 +7,51 @@ $(document).ready(function(){
             });
         });
     });
+
+    $('#registrar').click(function()
+    {
+
+        $('.colorear').each(function()
+            {
+                var aa = $(this).val();
+                if(aa == "")
+                {   
+                    $(this).addClass('input_vacio');
+                    $(this).attr("placeholder", "* Campo obligatorio");
+                    $(this).css("border-color","#990000","border-size","2px");
+                    return false;
+
+                }
+                else
+                {
+                    $(this).addClass('input_lleno');
+                    $(this).attr("placeholder", "");
+                    $(this).css("border-color","green","border-size","2px");
+                }
+
+            });
+
+        });
+
+     $('.colorear').blur(function()
+            {
+                var aa = $(this).val();
+                if(aa == "")
+                {   
+                    $(this).addClass('input_vacio');
+                    $(this).attr("placeholder", "* Campo obligatorio");
+                    $(this).css("border-color","#990000","border-size","2px");
+                    return false;
+
+                }
+                else
+                {
+                    $(this).addClass('input_lleno');
+                    $(this).attr("placeholder", "");
+                    $(this).css("border-color","green","border-size","2px");
+                }
+
+            });
 });
         
 

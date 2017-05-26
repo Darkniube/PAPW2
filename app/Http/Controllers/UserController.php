@@ -39,6 +39,6 @@ class UserController extends Controller
 
         Storage::disk('perfil')->put($file_route, \file_get_contents($img->getRealPath()));
 
-    	return view('index');
+    	return view('login');
     }
 }

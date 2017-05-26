@@ -9,7 +9,7 @@
             <div class="row">
                 <section class="posts col-xs-12 col-sm-12 col-md-9 col-lg-9">
                     <div id="ul-re">
-                        <h3>Ultimas reseñas</h3>
+                        <h3 class="text-w"">Ultimas reseñas</h3>
                         <hr class="line">
                     </div>
                     
@@ -38,7 +38,7 @@
 
                         <div class="contenedor-botones">
                         {!!link_to_route('Resena.show','Leer mas',$result->idreview, ['class'=>'btn btn-primary'])!!}
-                        <button type="button" class="btn btn-success">Comentarios <span class="badge">2</span></button>
+                    <!-- <button type="button" class="btn btn-success">Comentarios <span class="badge">2</span></button>-->
                         </div>
 
                     </article>

@@ -12,7 +12,7 @@ textarea{
 }
 
 .line{
-    border: solid #4d4d4d 1px;
+    border: solid white 1px;
 }
 
 .center-block{
@@ -29,7 +29,10 @@ textarea{
     }
 
 .fondo{
-    background:#ccd9ff; 
+    /*background:#ccd9ff;*/
+    background-image: url("../images/fondo-jumbo2.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
     padding-bottom: 20px;
     width: 100%;
 }
@@ -39,7 +42,8 @@ textarea{
 }
 
 .navbar-default{
-	background-image: -webkit-linear-gradient(left, #b3d1ff, #003380);
+	/*background-image: -webkit-linear-gradient(left, #b3d1ff, #003380);*/
+    background: rgba(0, 51, 128,0.6);
 	margin-bottom: 0px;
 	border-radius: 0px;
 	border:0px;
@@ -53,8 +57,8 @@ textarea{
 .navbar-default .navbar-brand:hover,
 .navbar-default .nav li a:hover,  
 .navbar-default .nav li a:focus{
-	background: #e6e6e6;
-	color:#3366ff;
+	background: rgba(255, 255, 255,0.6);
+	color:rgb(0, 51, 128);
 }
 
 .sinpadding-top{
@@ -71,7 +75,10 @@ textarea{
 }
 
 .jumbotron{
-    background:#003380;
+    /*background:#003380;*/
+    background-image: url("../images/fondo-jumbo.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
     padding-top: 0px;
     padding-bottom: 0px;
     margin:0px;
@@ -161,7 +168,7 @@ textarea{
 }
 
 .btn-primary{
-    background: #0099e6;
+    background: #006699;
     border-color: #006699;
 }
 
@@ -188,4 +195,8 @@ textarea{
 #imagen-pre{
     height: 200px;
     width: 100px;
+}
+
+.text-w{
+    color: white;
 }

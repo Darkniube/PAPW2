@@ -83,12 +83,12 @@
 
         @yield('content')
                 <section class="posts hidden-xs hidden-sm col-md-3 col-lg-3">
-                    <h4>Reseñas mas recientes</h4>
+                    <h4 class="text-w"">Reseñas mas recientes</h4>
                     <aside> 
                         @foreach($ultima_resenas as $ultima_resena)
                         <a href="{{URL::route('Resena.show',$ultima_resena->idreview)}}" class="list-group-item">
                             <h4 class="list-group-item-heading">{{$ultima_resena->titulo}}</h4>
-                            <p class="list-group-item-text limitado2">{{$ultima_resena->texto}}</p>
+                            <p class="list-group-item-text limitado3">{{$ultima_resena->texto}}</p>
                         </a>
                         @endforeach()
                     </aside>
@@ -115,14 +115,14 @@
                                 <h4 class="modal-text">Titulo: </h4>
                                 <div class="input-group">
                                     <div class="input-group-addon colorF"><span class="glyphicon glyphicon-star"></span></div>
-                                    {!!Form::text('titulo',null,['id'=>'titulo','class'=>'form-control colorF2'])!!}
+                                    {!!Form::text('titulo',null,['id'=>'titulo','class'=>'form-control colorF2 colorear'])!!}
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <h4 class="modal-text">Genero: </h4>
                                 <div class="input-group">
-                                    <div class="input-group-addon colorF"><span class="glyphicon glyphicon-star"></span></div>
+                                    <div class="input-group-addon colorF "><span class="glyphicon glyphicon-star"></span></div>
                                     <select name="genero" id="genero" class="form-control colorF2">
                                         @foreach($generos as $genero)
                                             <option value="{{$genero->idgenre}}">{{$genero->nombre}}</option>
@@ -138,7 +138,6 @@
                                    <input type="file" id="imagen" name="imagen" class="input-file">
                                     <!--<input type="file" id="imagen" name="imagen" class="input-file">-->
                                     <image id="imagen-pre" name="imagen-pre" src="/images/image-icon2.png">
-                                    <output id="list"></output>
                                 </div>
 
             
@@ -155,7 +154,7 @@
                                 <h4 class="modal-text">Reseña: </h4>
                                 <div class="input-group">
                                     <div class="input-group-addon colorF"><span class="glyphicon glyphicon-pencil"></span></div>
-                                    {!!Form::textarea('texto',null,['id'=>'texto','class'=>'form-control colorF2', 'rows'=>10])!!}
+                                    {!!Form::textarea('texto',null,['id'=>'texto','class'=>'form-control colorF2 colorear', 'rows'=>10])!!}
                                 </div> 
                             </div>
 
