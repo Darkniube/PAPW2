@@ -61,9 +61,9 @@ $(this).text($limite);
 
      $limite_text = $(this).text();
 
-if ($limite_text.length > 50)
+if ($limite_text.length > 10)
 {
-     $limite = $limite_text.substr(0, 50)+" ...";
+     $limite = $limite_text.substr(0, 10);
 $(this).text($limite);
 }
 });
@@ -79,6 +79,16 @@ $(this).text($limite);
 }
 });
 
+      $(".limitado4").each(function (){
+
+     $limite_text = $(this).text();
+
+if ($limite_text.length > 100)
+{
+     $limite = $limite_text.substr(0, 300);
+$(this).text($limite);
+}
+});
 });
 
   /*function archivo(evt) {

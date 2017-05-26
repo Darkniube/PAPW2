@@ -10,6 +10,7 @@ $(document).ready(function(){
 
     $('#registrar').click(function()
     {
+        var vacio=0;
 
         $('.colorear').each(function()
             {
@@ -19,18 +20,25 @@ $(document).ready(function(){
                     $(this).addClass('input_vacio');
                     $(this).attr("placeholder", "* Campo obligatorio");
                     $(this).css("border-color","#990000","border-size","2px");
-                    return false;
-
+                    if($("#imagen").val()=="")
+                    {
+                        $("#imagen-pre").css("border-color","#990000","border-size","2px");
+                    }
+                    vacio++;
                 }
                 else
                 {
                     $(this).addClass('input_lleno');
                     $(this).attr("placeholder", "");
-                    $(this).css("border-color","green","border-size","2px");
+                    $(this).css("border-color","red","border-size","100px");
                 }
 
             });
 
+                if(vacio > 0)
+                {
+                    event.preventDefault();
+                }
         });
 
      $('.colorear').blur(function()
@@ -52,6 +60,7 @@ $(document).ready(function(){
                 }
 
             });
+
 });
         
 

@@ -19,12 +19,12 @@
                             
 		                </a>
 	   	  
-		                <h2 class="result-title">	
-		                    <a href="{{URL::route('Resena.show',$resultado->idreview)}}">{{$resultado->titulo}}</a>	     
+		                <h2 class="result-title text-center">	
+		                    <a href="{{URL::route('Resena.show',$resultado->idreview)}}">"{{$resultado->titulo}}"</a>	     
 		                </h2>
 
 		                <p>
-		                    <span class="result-fecha">{{$resultado->texto}}</span> por <span class="result-autor"><a href="#">{{$resultado->name}}</a></span>
+		                    <span class="result-fecha limitado4">{{$resultado->texto}}</span> por <span class="result-autor"><a href="#">{{$resultado->name}}</a></span>
 		                </p>
 
 	                </article>

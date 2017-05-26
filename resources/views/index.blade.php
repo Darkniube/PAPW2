@@ -31,28 +31,28 @@
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                           {!!Form::text('name',null,['id'=>'nombre','class'=>'form-control colorear', 'placeholder'=>'Nombre de usuario','required'])!!}
+                           {!!Form::text('name',null,['id'=>'nombre','class'=>'form-control colorear', 'placeholder'=>'Nombre de usuario'])!!}
                         </div>
                     </div>
         
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon"><span>@</span></div>
-                            {!!Form::text('email',null,['id'=>'nombre','class'=>'form-control colorear', 'placeholder'=>'Correo electronico','required'])!!}
+                            {!!Form::text('email',null,['id'=>'nombre','class'=>'form-control colorear', 'placeholder'=>'Correo electronico'])!!}
                         </div>
                     </div>
            
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                            {!!Form::password('pass',['id'=>'pass','class'=>'form-control colorear', 'placeholder'=>'Contraseña','required'])!!}
+                            {!!Form::password('pass',['id'=>'pass','class'=>'form-control colorear', 'placeholder'=>'Contraseña'])!!}
                         </div>
                     </div>
            
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                            {!!Form::password('pass2',['id'=>'pass2','class'=>'form-control colorear', 'placeholder'=>'Contraseña','required'])!!}
+                            {!!Form::password('pass2',['id'=>'pass2','class'=>'form-control colorear', 'placeholder'=>'Contraseña'])!!}
                         </div>
                     </div>
 
@@ -81,7 +81,7 @@
                         <h4 class="modal-text">Imagen de perfil:</h4> 
                         <div class="input-group"> 
                             <div class="custom-input-file">
-                                {!!Form::file('imagen',['id'=>'imagen','class'=>'input-file form-control'])!!}
+                                {!!Form::file('imagen',['id'=>'imagen','class'=>'input-file form-control colorear'])!!}
                                     <!--<input type="file" id="imagen" name="imagen" class="input-file">-->
                                     <image id="imagen-pre" name="imagen-pre" src="images/image-icon.png">
                                 <output id="list"></output>

@@ -82,6 +82,11 @@
     width: 100px;
 }
 
+span.datos{
+    display: inline-block;
+    width: 80px;
+}
+
 @media screen and (max-width:768px){
     .logo{
         width: 80%; 
@@ -93,8 +98,12 @@
     }
 
     .post .thumb img{
-        width:60%;
-        height: 400px;
+        width:250px;
+        height: 350px;
+    }
+
+    div.text-left{
+        text-align: center;
     }
 }
 	
@@ -109,8 +118,8 @@
     }
 
     .post .thumb img{
-        width:250px;
-        height: 400px;
+        width:200px;
+        height: 300px;
     }
 }
 .container-btn{
