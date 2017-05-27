@@ -30,6 +30,8 @@ class PerfilController extends Controller
          $user->u_imagen= $file_route;
         }
         $user->name = $request->name;
+        $user->gender = $request->gender;
+        $user->birthday=$request->year.'-'.$request->day.'-'.$request->month;
 
         $user->save();
         if($img!=NULL)

@@ -23,13 +23,14 @@ Route::get('resena','ReviewController@index');
 Route::get('vresena','VReviewController@index');
 Route::get('perfil','FrontController@perfil');
 
+Route::get('Resultados', 'ResultsController@busqueda');
+
 Route::resource('Usuario','UserController');
 Route::resource('Resena','ReviewController');
 Route::resource('Comentario','ComentController');
 Route::resource('VResenas','VReviewController'); 
 Route::resource('Log','LogController'); 
 Route::resource('Logout','LogController@logout'); 
-Route::resource('Resultados','ResultsController'); 
 Route::resource('Perfil','PerfilController'); 
 
 });

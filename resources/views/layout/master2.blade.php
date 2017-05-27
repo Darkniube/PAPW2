@@ -59,9 +59,8 @@
                             @endif()
                         </ul>
     
-                        {!!Form::open(['route'=>'Resultados.store','Method'=>'GET','class'=>'navbar-form navbar-right'])!!}
+                        {!!Form::open(['url'=>'Resultados','method'=>'get','class'=>'navbar-form navbar-right'])!!}
 
-                           {{ csrf_field() }}
     
                             <div class="form-group">
                                 {!!Form::text('texto',null,['id'=>'texto','class'=>'form-control colorear4','´placeholder'=>'buscar...'])!!}

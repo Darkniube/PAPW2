@@ -1,7 +1,7 @@
 @extends('layout.master2')
 
     @section('estilos')
-        <link rel="stylesheet" href="/css/resena.css">
+        <link rel="stylesheet" href="/css/resena2.css">
     @stop
 
     @section('content')
@@ -24,9 +24,9 @@
                             <img class="img-thumbnail" src="/images/posters/{{$result->r_imagen}}" alt="">
                         </a>
             
-                        <h2 class="post-title text-center"> 
+                        <h4 class="post-title text-center"> 
                             <a href="{{URL::route('Resena.show',$result->idreview)}}" class="text">"{{$result->titulo}}"</a>         
-                        </h2>
+                        </h4>
 
                         <p>
                             <span class="post-fecha limitado2">{{$result->created_at}}</span> por <span class="post-autor"><b>{{$result->name}}</b></span>

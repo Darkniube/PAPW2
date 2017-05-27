@@ -157,9 +157,9 @@ $('#resenar').click(function()
 
      $limite_text = $(this).text();
 
-if ($limite_text.length > 500)
+if ($limite_text.length > 300)
 {
-     $limite = $limite_text.substr(0, 400)+" ...";
+     $limite = $limite_text.substr(0, 300)+" ...";
 $(this).text($limite);
 }
 });

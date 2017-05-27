@@ -51,7 +51,7 @@ class ReviewController extends Controller
     public function show($id)
     {
         $result = \App\Review::join('genre', 'review.idgenre', '=', 'genre.idgenre')->join('users', 'users.iduser', '=', 'review.iduser')->where('idreview', $id)->get();
-        $coments = \App\Coment::select('u_imagen','name','idcoment','texto','coment.created_at')->join('users', 'coment.iduser', '=', 'users.iduser')->where('idreview', $id)->get();
+        $coments = \App\Coment::select('u_imagen','name','idcoment','texto','coment.created_at')->join('users', 'coment.iduser', '=', 'users.iduser')->where('idreview', $id)->orderby('created_at','DESC')->get();
         $generos = \App\Genre::all(); 
         $ultima_resenas = \App\Review::orderby('created_at','DESC')->take(2)->get();
 
@@ -71,6 +71,7 @@ class ReviewController extends Controller
         $resenas->titulo = $request->titulo;
         $resenas->texto = $request->texto;
         $resenas->idgenre = $request->genero;
+        $resenas->anio = $request->year;
        
 
         $resenas->save();
@@ -78,7 +79,7 @@ class ReviewController extends Controller
         {
         Storage::disk('posters')->put($file_route, \file_get_contents($img->getRealPath()));
         }
-        $result = \App\Review::where('idreview', $id)->get();
+        $result = \App\Review::join('genre', 'review.idgenre', '=', 'genre.idgenre')->join('users', 'users.iduser', '=', 'review.iduser')->where('idreview', $id)->get();
         $coments = \App\Coment::select('u_imagen','name','idcoment','texto','coment.created_at')->join('users', 'coment.iduser', '=', 'users.iduser')->where('idreview', $id)->get();
         $generos = \App\Genre::all(); 
         $ultima_resenas = \App\Review::orderby('created_at','DESC')->take(2)->get();

@@ -16,10 +16,28 @@ h3{
     background: white;
 }
 
-@media screen and (max-width:480px){
     .img-perfil{
-        width: 100%;
+        width: 140px;
+        height: 140px;
     }
+
+.name{
+    margin-top: 70px;
+}
+@media screen and (max-width:880px){
+    .img-perfil{
+        width: 150px;
+        height: 150px;
+    }
+
+    .name{
+    margin-top: 10px;
+}
+
+.post .thumb img{
+width: 200px !important;
+        height: 200px !important;
+}
 }
 
 #post-remove-button, #post-edit-button{
@@ -40,4 +58,8 @@ h5{
 #imagen-pre2{
     width: 150px;
     height: 150px;
+}
+
+.fecha{
+    height: 60px;
 }

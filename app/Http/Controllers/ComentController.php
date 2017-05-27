@@ -16,7 +16,7 @@ class ComentController extends Controller
     {
     	\App\Coment::create([
     		'texto' => $request['texto'],
-    		'iduser' => '1',
+    		'iduser' => $request['iduser'],
     		'idreview' =>$request['idreview'],
     		]);
 

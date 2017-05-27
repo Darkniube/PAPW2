@@ -23,9 +23,16 @@
 		                    <a href="{{URL::route('Resena.show',$resultado->idreview)}}">"{{$resultado->titulo}}"</a>	     
 		                </h2>
 
-		                <p>
-		                    <span class="result-fecha limitado4">{{$resultado->texto}}</span> por <span class="result-autor"><a href="#">{{$resultado->name}}</a></span>
-		                </p>
+                        <p>
+                            <span class="result-fecha limitado2">{{$resultado->created_at}}</span> por <span class="result-autor"><b>{{$resultado->name}}</b></span>
+                        </p>
+
+                        <p>
+                            <span class="result-fecha limitado4">{{$resultado->texto}}</span>
+                        </p>
+
+
+                        {!!link_to_route('Resena.show','Leer mas',$resultado->idreview, ['class'=>'btn btn-primary'])!!}
 
 	                </article>
                     @endforeach()
