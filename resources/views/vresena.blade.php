@@ -52,6 +52,7 @@
                        <div class="col-lg-12">   
                             <div id="box-coment">
                                 {!!Form::open(['route'=>'Comentario.store','method'=>'POST','class'=>'form-inline'])!!}
+                                {{ csrf_field() }}
                                     <div class="form-group">
                                         <div class="input-group">
            	                     	        <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
@@ -97,6 +98,7 @@
                     <div class="modal-body"> 
                         
                         {!!Form::model($results,['route'=>['Resena.update',$results->idreview],'method'=>'PUT','files'=>true])!!}
+                        {{ csrf_field() }}
                             <div class="form-group">
                                 <h4 class="modal-text">Titulo: </h4>
                                 <div class="input-group">
@@ -167,6 +169,7 @@
                                 <h4 class="modal-text">Seguro que desea eliminar la reseña?</h4>
 
                                 {!!Form::open(['route'=>['Resena.destroy',$results->idreview],'method'=>'DELETE','class'=>'form-inline'])!!}
+                                    {{ csrf_field() }}
                                     <div class="container-btn">
                                         <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-5">
                                             {!!Form::submit('Cancelar',['data-dismiss'=>'modal','class'=>'btn btn-primary btn-lg center-block'])!!}

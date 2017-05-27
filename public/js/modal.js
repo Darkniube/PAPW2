@@ -2,8 +2,41 @@ $(document).ready(function(){
 
  $('#registrar').click(function()
     {
+        var cont = $("#pass").val();
+        var cont2 = $("#pass2").val();
 
         $('.colorear').each(function()
+            {
+                var aa = $(this).val();
+                if(aa == "")
+                {   
+                    $(this).attr("placeholder", "* Campo obligatorio");
+                    $(this).css("border-color","#990000","border-size","2px");
+                    event.preventDefault();
+
+                }
+                else
+                {
+                    $(this).attr("placeholder", "");
+                    $(this).css("border-color","green","border-size","2px");
+                }
+
+            });
+
+        if(cont!=cont2)
+        {
+            $("#pass").val("");
+            $("#pass2").val("");
+            $("#pass").attr("placeholder","Las contraseñas no coinciden");
+            $("#pass2").attr("placeholder","Las contraseñas no coinciden");
+            $("#pass").css("border-color","#990000","border-size","3px");
+            $("#pass2").css("border-color","#990000","border-size","3px");
+            event.preventDefault();
+        }
+
+        });
+
+     $('.colorear').blur(function()
             {
                 var aa = $(this).val();
                 if(aa == "")
@@ -11,7 +44,29 @@ $(document).ready(function(){
                     $(this).addClass('input_vacio');
                     $(this).attr("placeholder", "* Campo obligatorio");
                     $(this).css("border-color","#990000","border-size","2px");
-                    return false;
+
+                }
+                else
+                {
+                    $(this).addClass('input_lleno');
+                    $(this).attr("placeholder", "");
+                    $(this).css("border-color","green","border-size","2px");
+                }
+
+            });
+     
+$('#resenar').click(function()
+    {
+
+        $('.colorear2').each(function()
+            {
+                var aa = $(this).val();
+                if(aa == "")
+                {   
+                    $(this).addClass('input_vacio');
+                    $(this).attr("placeholder", "* Campo obligatorio");
+                    $(this).css("border-color","#990000","border-size","2px");
+                    event.preventDefault();
 
                 }
                 else
@@ -25,7 +80,7 @@ $(document).ready(function(){
 
         });
 
-     $('.colorear').blur(function()
+     $('.colorear2').blur(function()
             {
                 var aa = $(this).val();
                 if(aa == "")
@@ -33,7 +88,6 @@ $(document).ready(function(){
                     $(this).addClass('input_vacio');
                     $(this).attr("placeholder", "* Campo obligatorio");
                     $(this).css("border-color","#990000","border-size","2px");
-                    return false;
 
                 }
                 else
@@ -44,7 +98,60 @@ $(document).ready(function(){
                 }
 
             });
-     
+
+    $('#logueo').click(function()
+    {
+
+        $('.colorear3').each(function()
+            {
+                var aa = $(this).val();
+                if(aa == "")
+                {   
+                    $(this).addClass('input_vacio');
+                    $(this).attr("placeholder", "* Campo obligatorio");
+                    $(this).css("border-color","#990000","border-size","2px");
+                    event.preventDefault();
+
+                }
+                else
+                {
+                    $(this).addClass('input_lleno');
+                    $(this).attr("placeholder", "");
+                    $(this).css("border-color","green","border-size","2px");
+                }
+
+            });
+
+        });
+
+     $('.colorear3').blur(function()
+            {
+                var aa = $(this).val();
+                if(aa == "")
+                {   
+                    $(this).attr("placeholder", "* Campo obligatorio");
+                    $(this).css("border-color","#990000","border-size","2px");
+
+                }
+                else
+                {
+                    $(this).attr("placeholder", "");
+                    $(this).css("border-color","green","border-size","2px");
+                }
+
+            });
+
+     $('.colorear4').blur(function()
+            {
+                var aa = $(this).val();
+                if(aa == "")
+                {   ;
+                    $(this).attr("placeholder", "¿Que pelicula buscas?");
+                    $(this).css("border-color","blue","border-size","2px");
+
+                }
+
+            });
 
     $(".limitado").each(function (){
 

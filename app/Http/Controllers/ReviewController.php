@@ -89,5 +89,13 @@ class ReviewController extends Controller
     public function destroy($id)
     {
         \App\Review::destroy($id);
+
+        $resenas = \App\Review::join('users', 'review.iduser', '=', 'users.iduser')->orderBy('idreview','desc')->paginate(4);
+          
+        //return response()->json( $resenas );
+        $generos = \App\Genre::all();
+        $ultima_resenas = \App\Review::orderby('created_at','DESC')->take(2)->get();
+
+        return view('resena', ['resenas' => $resenas, 'generos' => $generos, 'ultima_resenas' => $ultima_resenas]);  
     }
 }

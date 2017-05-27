@@ -64,7 +64,7 @@
                            {{ csrf_field() }}
     
                             <div class="form-group">
-                                {!!Form::text('texto',null,['id'=>'texto','class'=>'form-control','´placeholder'=>'buscar...'])!!}
+                                {!!Form::text('texto',null,['id'=>'texto','class'=>'form-control colorear4','´placeholder'=>'buscar...'])!!}
                             </div>   
                             
                              <div class="form-group">
@@ -115,7 +115,7 @@
                                 <h4 class="modal-text">Titulo: </h4>
                                 <div class="input-group">
                                     <div class="input-group-addon colorF"><span class="glyphicon glyphicon-star"></span></div>
-                                    {!!Form::text('titulo',null,['id'=>'titulo','class'=>'form-control colorF2 colorear'])!!}
+                                    {!!Form::text('titulo',null,['id'=>'titulo','class'=>'form-control colorF2 colorear2'])!!}
                                 </div>
                             </div>
 
@@ -135,7 +135,7 @@
                             <div class="form-group">
                                 <h4 class="modal-text">Imagen:</h4>   
                                 <div class="custom-input-file">
-                                   <input type="file" id="imagen" name="imagen" class="input-file">
+                                   <input type="file" id="imagen" name="imagen" class="input-file colorear2" required>
                                     <!--<input type="file" id="imagen" name="imagen" class="input-file">-->
                                     <image id="imagen-pre" name="imagen-pre" src="/images/image-icon2.png">
                                 </div>
@@ -153,14 +153,14 @@
                                 <h4 class="modal-text">Reseña: </h4>
                                 <div class="input-group">
                                     <div class="input-group-addon colorF"><span class="glyphicon glyphicon-pencil"></span></div>
-                                    {!!Form::textarea('texto',null,['id'=>'texto','class'=>'form-control colorF2 colorear', 'rows'=>10])!!}
+                                    {!!Form::textarea('texto',null,['id'=>'texto','class'=>'form-control colorF2 colorear2', 'rows'=>10])!!}
                                 </div> 
                             </div>
 
                             {!!Form::hidden('idreview',Auth::user()->iduser)!!}
-
+                            {{ csrf_field() }}
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-lg center-block">Guardar</button>
+                                <button id="resenar" type="submit" class="btn btn-primary btn-lg center-block">Guardar</button>
                             </div>
                          {!!Form::close()!!}
                     </div>

@@ -22,14 +22,14 @@
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                                {!!Form::text('email',null,['id'=>'email','class'=>'form-control', 'placeholder'=>'correo usuario','required'])!!}
+                                {!!Form::text('email',null,['id'=>'email','class'=>'form-control colorear3', 'placeholder'=>'correo usuario','required'])!!}
                             </div>
                         </div>
           
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                                {!!Form::password('pass',['id'=>'pass','class'=>'form-control', 'placeholder'=>'contraseña','required'])!!}
+                                {!!Form::password('pass',['id'=>'pass','class'=>'form-control colorear3', 'placeholder'=>'contraseña','required'])!!}
                             </div>
                         </div>
           
